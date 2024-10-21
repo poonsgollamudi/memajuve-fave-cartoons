@@ -24,9 +24,9 @@ for (let i = 0; i < divs_len; i++) {
     />
     <div class="card-body text-center">
       <h5 class="card-title">${myJson.Title}</h5>
-      <p>
+      <h6>
         ${myJson.Plot}
-      </p>
+      </h6>
       <a
         href=${jsonData.cartoons[i].utube_link}
         target="_blank"

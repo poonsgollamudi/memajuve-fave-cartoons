@@ -1,8 +1,8 @@
 .bg-body-color {
-  background-color: #f7fad7;
+  background-color: #c9f8f8;
 }
 .nav-color {
-  background-color: #d9d688;
+  background-color: #88d1d9;
 }
 .logo {
   width: 75px;
@@ -15,5 +15,5 @@
   justify-content: center !important;
 }
 .card {
-  background-color: #ece596 !important;
+  background-color: #6fd3de !important;
 }
