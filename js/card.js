@@ -8,7 +8,7 @@ var divs_len = document.getElementsByClassName("empty").length;
 
 for (let i = 0; i < divs_len; i++) {
 
-        let apiUrl = `http://www.omdbapi.com/?i=${jsonData.cartoons[i].id}&apikey=82b6f576`
+        let apiUrl = `https://www.omdbapi.com/?i=${jsonData.cartoons[i].id}&apikey=82b6f576`
         const response = await fetch(apiUrl);
         const myJson = await response.json(); //extract JSON from the http response
         // do something with myJson
