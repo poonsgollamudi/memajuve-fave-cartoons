@@ -1,0 +1,19 @@
+.bg-body-color {
+  background-color: #f7fad7;
+}
+.nav-color {
+  background-color: #d9d688;
+}
+.logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+.center {
+  display: flex;
+  justify-content: center !important;
+}
+.card {
+  background-color: #ece596 !important;
+}
