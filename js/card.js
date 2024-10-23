@@ -1,40 +1,36 @@
-import jsonData from "./data/cartoons.json" with { type: "json" };
+//import * as DotenvModule from "../node_modules/dotenv/lib/main.js"
 
+import myCartoons from "./cartoons.js";
+//import apiKey from "../index.js";
+
+//var divs_len = document.getElementsByClassName("empty").length;
 var divsCard = document.querySelectorAll(".empty");
-//console.log(divsCard);
-var divs_len = document.getElementsByClassName("empty").length;
+const apiKey = "82b6f576";
+for (let i = 0; i < myCartoons.cartoons.length; i++) {
+  let apiUrl = `https://www.omdbapi.com/?i=${myCartoons.cartoons[i].id}&apikey=${apiKey}`;
+  const response = await fetch(apiUrl);
+  const myJson = await response.json(); //extract JSON from the http response
 
+  // console.log(myJson);
 
-
-for (let i = 0; i < divs_len; i++) {
-
-        let apiUrl = `https://www.omdbapi.com/?i=${jsonData.cartoons[i].id}&apikey=82b6f576`
-        const response = await fetch(apiUrl);
-        const myJson = await response.json(); //extract JSON from the http response
-        // do something with myJson
-        console.log(myJson)
-      
   var card = `
   <div class="card">
     <img
       src=${myJson.Poster}
       class="card-img-top"
-      height="300px"
+      height="400px"
       alt="Sunset Over the Sea"
     />
     <div class="card-body text-center">
       <h5 class="card-title">${myJson.Title}</h5>
-      <h6>
-        ${myJson.Plot}
-      </h6>
       <a
-        href=${jsonData.cartoons[i].utube_link}
+        href=https://www.imdb.com/title/${myCartoons.cartoons[i].id}
         target="_blank"
         class="btn btn-primary"
       >
-        Cartoon Opening
+        Learn More
       </a>
-    </div>
+      </div>
   </div>
 `;
 
